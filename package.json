@@ -1,0 +1,22 @@
+{
+  "name": "tokipona-kamasona",
+  "version": "1.0.0",
+  "description": "A toki pona language reference to and from English.",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "^0.23.1",
+    "jsx-loader": "^0.13.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
