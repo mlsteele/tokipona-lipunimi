@@ -15,3 +15,7 @@ webpack-dev-server --watch
 ```
 
 Visit [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/)
+
+## Acknowledgements
+
+Thanks to [Visual Toki Pona](https://github.com/x-raizor/visual-tokipona) from which I took `tokipona.json`.
