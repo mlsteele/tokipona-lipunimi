@@ -23,7 +23,7 @@ module.exports = [{
         "rus": "всё, каждое, жизнь, вселенная, все, каждый, целый, полный",
         "image": "ali-ale"
 }, {
-        "eng": "bottom, lower portion below, a floor, below the bottom of lower down",
+        "eng": "bottom, lower portion below, a floor, below the bottom of lower down, humble",
         "ita": "inferiore, parte inferiore sotto, un pavimento, sotto il fondo piu in basso",
         "toki": "anpa",
         "rus": "низ, нижняя часть, под, пол, ниже, низ, ниже, вниз",
@@ -41,7 +41,7 @@ module.exports = [{
         "rus": "или",
         "image": "anu"
 }, {
-        "eng": "stay, wait, stay, store remaining, fixed, permanent, sedentary, sedentary",
+        "eng": "stay, wait, stay, store remaining, fixed, permanent, sedentary, sedentary, safe",
         "ita": "stare, attendere, stare, magazzini rimanente, fisso, permanente, sedentario, sedentario",
         "toki": "awen",
         "rus": "оставаться, ждать, пребывать, хранить, оставшийся, неподвижный, постоянный, сидячий, оседлый",
@@ -77,7 +77,7 @@ module.exports = [{
         "rus": "инструмент, устройство, приспособление, механизм, аппарат, машина, прибор; вещь, использемая для определённой цели",
         "image": "ilo"
 }, {
-        "eng": "inside, the inner world, the center, the stomach, stomach, inner",
+        "eng": "inside, the center, the stomach, stomach, inner",
         "ita": "dentro, il mondo interiore, il centro, lo stomaco, stomaco, interiore",
         "toki": "insa",
         "rus": "внутри, внутренний мир, центр, живот, желудок, внутренний",
@@ -101,7 +101,7 @@ module.exports = [{
         "rus": "жёлтый, светло-зелёный",
         "image": "jelo"
 }, {
-        "eng": "have, include, property, ownership, receive, take a",
+        "eng": "have, include, property, ownership, receive, take a, contain",
         "ita": "hanno, includere, immobili, proprieta, ricevere, prendere una",
         "toki": "jo",
         "rus": "иметь, содержать, имущество, собственность, получить, взять",
@@ -119,7 +119,7 @@ module.exports = [{
         "rus": "звук, шум, голос, шуметь, звонить, играть (на инструменте)",
         "image": "kalama"
 }, {
-        "eng": "approach, come, come, happen, start, lead to a state, event, accident, chance, arrival, start, offensive, future bring, call",
+        "eng": "approach, come, come, happen, start, lead to a state, event, accident, chance, arrival, start, offensive, future bring, call, become",
         "ita": "approccio, vieni, vieni, accadere, iniziare, portare a uno stato, eventi, incidenti, caso, arrivo, avviare, offensivo, futuro portare, chiamata",
         "toki": "kama",
         "rus": "подходить, приходить, прибывать, случаться, начинать, приводить в состояние, событие, происшествие, шанс, прибытие, начало, наступление, будущее, принести, вызвать",
@@ -161,13 +161,13 @@ module.exports = [{
         "rus": "твёрдый, сплошной, каменный, металлический, твёрдая вещь, скала, камень, металл, земля",
         "image": "kiwen"
 }, {
-        "eng": "viscous substance, rubber powder",
+        "eng": "viscous substance, rubber, powder",
         "ita": "sostanza viscosa, polvere di gomma",
         "toki": "ko",
         "rus": "вязкая субстанция, резина, порошок",
         "image": "ko"
 }, {
-        "eng": "air, wind, smell, soul, spirit, airy, ethereal, gaseous",
+        "eng": "air, wind, smell, soul, spirit, airy, ethereal, gaseous, life",
         "ita": "aria, il vento, l'odore, l'anima, lo spirito, arioso, etereo, gassoso",
         "toki": "kon",
         "rus": "воздух, ветер, запах, душа, дух, воздушный, неземной, газообразный",
@@ -209,19 +209,19 @@ module.exports = [{
         "rus": "синий, сине-зелёный",
         "image": "laso"
 }, {
-        "eng": "head, mind, chief, leading, manage, supervise, guide",
+        "eng": "head, mind, chief, leading, manage, supervise, guide, plan",
         "ita": "testa, la mente, capo, leader, gestire, sorvegliare, guidare",
         "toki": "lawa",
         "rus": "голова, ум, главный, лидирующий, управлять, контролировать, направлять",
         "image": "lawa"
 }, {
-        "eng": "clothing, fabric",
+        "eng": "clothing, fabric, cover",
         "ita": "abbigliamento, tessuti",
         "toki": "len",
         "rus": "одежда, ткань",
         "image": "len"
 }, {
-        "eng": "cold, cold, uncooked, cool, freeze",
+        "eng": "cold, cold, uncooked, raw, cool, freeze",
         "ita": "freddo, freddo, crudo, freddo, congelare",
         "toki": "lete",
         "rus": "холод, холодный, неприготовленный, охладить, заморозить",
@@ -257,7 +257,7 @@ module.exports = [{
         "rus": "красный",
         "image": "loje"
 }, {
-        "eng": "be, located, be present, to exist, although",
+        "eng": "be, located, be present, to exist, although, true",
         "ita": "essere, che si trova, essere presenti, di esistere, anche se",
         "toki": "lon",
         "rus": "быть в, располагаться, быть, присутствовать, существовать, правда",
@@ -269,7 +269,7 @@ module.exports = [{
         "rus": "рука",
         "image": "luka"
 }, {
-        "eng": "look, see, watch, read, visual, visible",
+        "eng": "look, see, watch, read, visual, visible, try to",
         "ita": "guardare, vedere, guardare, leggere, visivo, visibile",
         "toki": "lukin",
         "rus": "смотреть, видеть, наблюдать, читать, визуальный, видимый",
@@ -413,7 +413,7 @@ module.exports = [{
         "rus": "глаз",
         "image": "oko"
 }, {
-        "eng": "love",
+        "eng": "love, respect",
         "ita": "amore",
         "toki": "olin",
         "rus": "любовь",
@@ -425,7 +425,7 @@ module.exports = [{
         "rus": "он, она, оно, это, они, его, её, их",
         "image": "ona"
 }, {
-        "eng": "open, turn",
+        "eng": "open, turn on",
         "ita": "aperto, turno",
         "toki": "open",
         "rus": "открыть, включить",
@@ -473,7 +473,7 @@ module.exports = [{
         "rus": "чёрный, тёмный, темнота, тень, затемнять",
         "image": "pimeja"
 }, {
-        "eng": "end, tip over, past, finish, zoom, turn off the",
+        "eng": "end, tip over, past, finish, zoom, turn off",
         "ita": "fine, ribaltarsi, passato, finitura, zoom, spegnere la",
         "toki": "pini",
         "rus": "конец, кончик, законченный, прошлый, заканчивать, приближать, выключать",
@@ -547,11 +547,11 @@ module.exports = [{
 }, {
         "eng": "how?",
         "ita": "Come?",
-        "toki": "kepeken nasin seme",
+        "toki": "kepeken nasin seme?",
         "rus": "как? каким образом?",
         "image": "seme"
 }, {
-        "eng": "top, above, on, top, sublime, religious, official",
+        "eng": "top, above, on, top, sublime, religious, official, amazing",
         "ita": "top, sopra, il, alto, sublime, religioso, ufficiale",
         "toki": "sewi",
         "rus": "верх, над, на, верхний, возвышенный, религиозный, официальный",
@@ -563,7 +563,7 @@ module.exports = [{
         "rus": "тело, физическое состояние",
         "image": "sijelo"
 }, {
-        "eng": "circle, wheel, ring, ball, ball, round, periodic, circling",
+        "eng": "circle, wheel, ring, ball, ball, round, periodic, circling, cycle",
         "ita": "cerchio, ruota, anello, palla, palla, rotondo, periodici, girando",
         "toki": "sike",
         "rus": "круг, колесо, кольцо, шар, мяч, круглый, периодический, кружить",
@@ -587,7 +587,7 @@ module.exports = [{
         "rus": "перед, грудь, торс, лицо, стена",
         "image": "sinpin"
 }, {
-        "eng": "image, picture, drawing, writing",
+        "eng": "image, picture, drawing, writing, represent",
         "ita": "immagine, ritratto, disegno, scrittura",
         "toki": "sitelen",
         "rus": "изображение, картинка, рисовать, писать",
@@ -629,7 +629,7 @@ module.exports = [{
         "rus": "горизонтальная поверхность, мебель, стол, стул, колонна, этаж",
         "image": "supa"
 }, {
-        "eng": "candy, sweets, sweet, elegant, sweetening",
+        "eng": "candy, sweets, sweet, elegant, sweetening, cute, innocent",
         "ita": "caramelle, dolci, dolce, elegante, addolcimento",
         "toki": "suwi",
         "rus": "конфетка, лакомство, сладкий, изящный, услащать",
@@ -677,7 +677,7 @@ module.exports = [{
         "rus": "помещение, пространство, дом, комната, здание, конструкция, городской, домашний",
         "image": "tomo"
 }, {
-        "eng": "double, two, pair, share, separate",
+        "eng": "double, two, pair, share, separate, divide",
         "ita": "doppio, due, coppia, condivisione, separata",
         "toki": "tu",
         "rus": "двойной, два, пара, разделять, отделять",
@@ -725,7 +725,7 @@ module.exports = [{
         "rus": "сила, энергия, мощный, интенсивный, уверенный, сильный, энергичный, усиливать, укреплять, возбуждать",
         "image": "wawa"
 }, {
-        "eng": "far, missing, missing, no, throw it away, clean, free",
+        "eng": "far, missing, missing, no, throw it away, clean, free, ignore",
         "ita": "lontano, manca, manca, no, gettarlo via, pulito, libero",
         "toki": "weka",
         "rus": "далекий, отсутствующий, пропавший, отсутствие, выбросить, убрать, освободиться",
@@ -736,17 +736,14 @@ module.exports = [{
         "toki": "wile",
         "rus": "хотеть, желать, сделать в будущем, желание, нужда, воля, необходимый",
         "image": "wile"
-}, {
-  "eng": "soldier, fighter",
-  "toki": "jan utala"
-}, {
+  }, {
     "eng": "get/receive",
     "toki": "kama jo"
   }, {
     "eng": "child",
     "toki": "jan lili"
   }, {
-    "eng": "soldier",
+    "eng": "soldier, fighter",
     "toki": "jan utala"
   }, {
     "eng": "friend",
@@ -815,9 +812,6 @@ module.exports = [{
     "eng": "I don't like it",
     "toki": "ona li ike tawa mi"
   }, {
-    "eng": "learn",
-    "toki": "kama sona"
-  }, {
     "eng": "where?",
     "toki": "lon seme?"
   }, {
@@ -847,9 +841,6 @@ module.exports = [{
   }, {
     "eng": "music",
     "toki": "kalama musi"
-  }, {
-    "eng": "how?",
-    "toki": "kepeken nasin seme?"
   }, {
     "eng": "it is hot",
     "toki": "seli li lon"
@@ -1025,9 +1016,6 @@ module.exports = [{
     "eng": "stranger",
     "toki": "jan sin"
   }, {
-    "eng": "school",
-    "toki": "tomo sona"
-  }, {
     "eng": "telephone",
     "toki": "ilo toki"
   }, {
@@ -1051,5 +1039,467 @@ module.exports = [{
   }, {
     "eng": "swamp/muddy area",
     "toki": "ma telo"
+  }, {
+    "eng": "otherwise/on the other hand",
+    "toki": "ante la"
+  }, {
+    "eng": "unfortunately",
+    "toki": "ike la"
+  }, {
+    "eng": "later",
+    "toki": "kama la"
+  }, {
+    "eng": "maybe",
+    "toki": "ken la"
+  }, {
+    "eng": "mainly",
+    "toki": "lawa la"
+  }, {
+    "eng": "apparently/clearly",
+    "toki": "lukin la"
+  }, {
+    "eng": "one of these days/some time",
+    "toki": "tenpo ijo kama la"
+  }, {
+    "eng": "as for me/as far as I'm concerned",
+    "toki": "mi la"
+  }, {
+    "eng": "if possible",
+    "toki": "ni li ken la"
+  }, {
+    "eng": "firstly/to begin with/to kick off",
+    "toki": "open la"
+  }, {
+    "eng": "for example",
+    "toki": "pana lukin la"
+  }, {
+    "eng": "besides/anyway",
+    "toki": "poka la"
+  }, {
+    "eng": "by the way",
+    "toki": "poka ni la"
+  }, {
+    "eng": "fortunately",
+    "toki": "pona la"
+  }, {
+    "eng": "similarly/likewise",
+    "toki": "sama la"
+  }, {
+    "eng": "sometimes",
+    "toki": "tenpo pi mute lili la"
+  }, {
+    "eng": "to start afresh",
+    "toki": "sin la"
+  }, {
+    "eng": "suddenly/unexpectedly",
+    "toki": "sona kama ala la"
+  }, {
+    "eng": "that's why/therefore",
+    "toki": "tan ni la"
+  }, {
+    "eng": "once upon a time",
+    "toki": "tenpo ijo la"
+  }, {
+    "eng": "at first/firstly",
+    "toki": "tenpo wan la"
+  }, {
+    "eng": "Is he a parent?",
+    "toki": "ona li mama ala mama?"
+  }, {
+    "eng": "Does she have many vegetables?",
+    "toki": "ona li jo ala jo e kili mute?"
+  }, {
+    "eng": "Is the wise man eating a fish?",
+    "toki": "mije sona li moku e kala anu seme?"
+  }, {
+    "eng": "What are you doing to her?",
+    "toki": "sina seme e ona?"
+  }, {
+    "eng": "Do you listen to your parents?",
+    "toki": "sina kute ala kute e mama sina?"
+  }, {
+    "eng": "What do sharks eat?",
+    "toki": "kala wawa li moku e seme?"
+  }, {
+    "eng": "What tools do you have?",
+    "toki": "sina jo e ilo seme?"
+  }, {
+    "eng": "Does the united community use the official Toki Pona book?",
+    "toki": "kulupu wan li pu ala pu?"
+  }, {
+    "eng": "Does a fish drink water?",
+    "toki": "kala li moku ala moku e telo?"
+  }, {
+    "eng": "Is the spoon small?",
+    "toki": "ilo moku li lili anu seme?"
+  }, {
+    "eng": "Can I hear a man or a woman?",
+    "toki": "Mi kute e mije anu meli?"
+  }, {
+    "eng": "What did he use?",
+    "toki": "ona li kepeken e seme?"
+  }, {
+    "eng": "Is the new guy in the toilet?",
+    "toki": "mije sin li lon tomo telo anu seme?"
+  }, {
+    "eng": "Do you know English?",
+    "toki": "sina sona ala sona e toki Inli?"
+  }, {
+    "eng": "Are you from Germany?",
+    "toki": "sina tan ala tan ma Tosi?"
+  }, {
+    "eng": "What's your name?",
+    "toki": "nimi sina li seme?"
+  }, {
+    "eng": "What's the second thing?",
+    "toki": "ijo nanpa tu li seme?"
+  }, {
+    "eng": "When are your parents coming?",
+    "toki": "tenpo seme la mama sina li kama?"
+  }, {
+    "eng": "What did you put the red watch next to?",
+    "toki": "sina pana e ilo tenpo loje poka seme?"
+  }, {
+    "eng": "Is this her dog?",
+    "toki": "ni li soweli ona anu seme?"
+  }, {
+    "eng": "Why are you sad?",
+    "toki": "sina pilin ike tan seme?"
+  }, {
+    "eng": "Can you come?",
+    "toki": "sina ken ala ken kama?"
+  }, {
+    "eng": "Why did the black bear eat the child?",
+    "toki": "tan seme la soweli wawa pimeja li moku e jan lili?"
+  }, {
+    "eng": "When is Mario coming?",
+    "toki": "jan Mawijo li kama lon tenpo seme?"
+  }, {
+    "eng": "Who are you?",
+    "toki": "sina jan seme?"
+  }, {
+    "eng": "Where is he?",
+    "toki": "ona li lon seme?"
+  }, {
+    "eng": "How did you do it?",
+    "toki": "sina pali e ni kepeken nasin seme?"
+  }, {
+    "eng": "How many times have you been there?",
+    "toki": "tenpo pi mute seme la sina lon ni?"
+  }, {
+    "eng": "stupid person",
+    "toki": "jan pi sona lili"
+  }, {
+    "eng": "The healthy little girl is watering the plants",
+    "toki": "meli lili pi sijelo pona li telo e kasi"
+  }, {
+    "eng": "The happy man made a watch",
+    "toki": "mije pi pilin pona li pali e ilo tenpo"
+  }, {
+    "eng": "I've been waiting for a long time",
+    "toki": "mi awen lon tenpo suli"
+  }, {
+    "eng": "Toki pona scholars use the official Toki Pona book often",
+    "toki": "jan sona pi toki pona li pu lon tenpo mute"
+  }, {
+    "eng": "Groups of Scientists are making life better",
+    "toki": "kulupu pi jan sona li pona e ale"
+  }, {
+    "eng": "A strong person is waiting",
+    "toki": "jan pi sijelo wawa li awen"
+  }, {
+    "eng": "The baby is inside the mother's womb",
+    "toki": "jan lili li lon insa pi mama meli"
+  }, {
+    "eng": "Many green sea creatures are at the bottom of the sea",
+    "toki": "kala laso mute li lon anpa pi telo suli"
+  }, {
+    "eng": "The warrior's new house is good",
+    "toki": "tomo sin pi jan utala li pona"
+  }, {
+    "eng": "He is coming tonight",
+    "toki": "tenpo pimeja ni la ona li kama"
+  }, {
+    "eng": "When I'm good to people, people are good to me",
+    "toki": "mi pona tawa jan, la jan li pona tawa mi"
+  }, {
+    "eng": "If you come to my house, I'll serve food",
+    "toki": "sina kama lon tomo mi, la mi pana e moku"
+  }, {
+    "eng": "When the sun is red, the time is right",
+    "toki": "suno li loje, la tenpo pona li lon"
+  }, {
+    "eng": "If god wills it, I will do it tomorrow",
+    "toki": "sewi li wile, la mi pali e ona lon tenpo suno kama"
+  }, {
+    "eng": "If your body is blue, it is a bad sign",
+    "toki": "sijelo sina li laso, la ni li ike"
+  }, {
+    "eng": "During bad times, a person needs to talk to friends",
+    "toki": "tenpo ike la jan li wile toki tawa jan pona"
+  }, {
+    "eng": "We're stronger as a group",
+    "toki": "kulupu la mi wawa"
+  }, {
+    "eng": "When I use the Toki Pona book, I feel good",
+    "toki": "mi pu, la mi pilin pona"
+  }, {
+    "eng": "If I don't have any animals, I eat vegetables",
+    "toki": "mi jo ala e soweli, la mi moku e kili"
+  }, {
+    "eng": "In this school, children have to use Toki Pona",
+    "toki": "tomo sona ni la jan lili li wile kepeken e toki pona"
+  }, {
+    "eng": "On the first day he only saw 1 blue bird",
+    "toki": "tenpo suno nanpa wan la ona li lukin e waso laso taso"
+  }, {
+    "eng": "On the second day he heard a loud animal noise",
+    "toki": "tenpo suno nanpa tu la ona li kute e mu wawa"
+  }, {
+    "eng": "Now he arrives at the door carrying 2 animals",
+    "toki": "tenpo ni la ona li kama lon lupa li jo e soweli tu"
+  }, {
+    "eng": "the box is small and cold",
+    "toki": "poki li lili li lete"
+  }, {
+    "eng": "But men and women are working and are feeling happy",
+    "toki": "taso mije en meli li pali li pilin pona"
+  }, {
+    "eng": "My sister opened the first and the second door",
+    "toki": "meli sama mi li open e lupa nanpa wan e lupa nanpa tu"
+  }, {
+    "eng": "He wants to go hunting and gets a bow and an orange vest",
+    "toki": "ona li wile alasa li kama jo e ilo alasa e len loje"
+  }, {
+    "eng": "The little girl tidied the house and washed the clothes",
+    "toki": "jan meli lili li pona e tomo li telo e len"
+  }, {
+    "eng": "She is happy and kisses her husband",
+    "toki": "ona li pilin pona li uta e mije ona"
+  }, {
+    "eng": "He cooks the rabbit and some rice",
+    "toki": "ona li seli e soweli e pan"
+  }, {
+    "eng": "I give a fish to her at home",
+    "toki": "mi pana e kala tawa ona lon tomo"
+  }, {
+    "eng": "I'm moving towards you",
+    "toki": "mi tawa sina"
+  }, {
+    "eng": "My parents are going to the sea",
+    "toki": "mama mi li tawa telo suli"
+  }, {
+    "eng": "I work a lot because of this",
+    "toki": "mi pali mute tan ni"
+  }, {
+    "eng": "I speak in Toki Pona",
+    "toki": "mi toki lon toki pona"
+  }, {
+    "eng": "I know a lot of languages because of this woman",
+    "toki": "mi sona e toki mute tan meli ni"
+  }, {
+    "eng": "He's giving away things from his house",
+    "toki": "ona li pana e ijo tan tomo ona"
+  }, {
+    "eng": "You work using hot tools",
+    "toki": "sina pali kepeken ilo seli"
+  }, {
+    "eng": "I'm here",
+    "toki": "mi lon"
+  }, {
+    "eng": "I am next to the shop",
+    "toki": "mi lon poka esun"
+  }, {
+    "eng": "The foundations of the building are strong",
+    "toki": "noka tomo li wawa"
+  }, {
+    "eng": "The insect is inside the tree",
+    "toki": "pipi li lon insa pi kasi kiwen"
+  }, {
+    "eng": "A large machine is moving in the sky",
+    "toki": "ilo suli li tawa lon sewi"
+  }, {
+    "eng": "The toys are at the bottom of the red box",
+    "toki": "ijo musi li lon noka pi poki loje"
+  }, {
+    "eng": "Water comes from the sky",
+    "toki": "telo li kama tan sewi"
+  }, {
+    "eng": "The document is under the cat",
+    "toki": "lipu li lon noka soweli"
+  }, {
+    "eng": "The vegetable is next to the spider",
+    "toki": "kili li lon poka pipi"
+  }, {
+    "eng": "I can see a black woman in front of the building",
+    "toki": "mi lukin e meli pimeja lon sinpin tomo"
+  }, {
+    "eng": "The rabid dog is behind you",
+    "toki": "soweli nasa li lon monsi sina"
+  }, {
+    "eng": "Don't speak! Take action!",
+    "toki": "o toki ala! o pali!"
+  }, {
+    "eng": "Neighbour! Why are you sad?",
+    "toki": "jan poka o. sina pilin ike tan seme?"
+  }, {
+    "eng": "Don't eat my turnip!",
+    "toki": "o moku ala e kili mi"
+  }, {
+    "eng": "God! Give goodness to me!",
+    "toki": "sewi o pana e pona tawa mi"
+  }, {
+    "eng": "Obey your parents!",
+    "toki": "o kute e mama sina"
+  }, {
+    "eng": "You're so tall!",
+    "toki": "sina suli a!"
+  }, {
+    "eng": "I should eat good things",
+    "toki": "mi o moku e ijo pona"
+  }, {
+    "eng": "Ha, ha, ha!",
+    "toki": "a a a!"
+  }, {
+    "eng": "Do it now!",
+    "toki": "o pali e ona lon tenpo ni"
+  }, {
+    "eng": "Go to your room!",
+    "toki": "o tawa tomo sina"
+  }, {
+    "eng": "Canada has so many fish!",
+    "toki": "ma Kanata li jo e kala mute a!"
+  }, {
+    "eng": "Wow! You're very strong!",
+    "toki": "a! sina wawa mute"
+  }, {
+    "eng": "Be strong bro!",
+    "toki": "jan sama o wawa"
+  }, {
+    "eng": "Don't use bad tools!",
+    "toki": "o kepeken ala e ilo ike"
+  }, {
+    "eng": "The woman's health improved. Yay!",
+    "toki": "sijelo meli li kama pona a!"
+  }, {
+    "eng": "omit needless words",
+    "toki": "o weka e nimi ike"
+  }, {
+    "eng": "A person who only knows one language does not truly know that language",
+    "toki": "sina sona e toki wan taso, la sina sona ala e toki ni"
+  }, {
+    "eng": "Happiness is when what you think, what you say and what you do are in harmony",
+    "toki": "toki sina en pali sina li sama, la sina pilin pona"
+  }, {
+    "eng": "Be the change you want to see in the world",
+    "toki": "sina wile ante e ale, la o ante e sina"
+  }, {
+    "eng": "The most fundamental question we can ever ask ourselves is whether or not the universe we live in is friendly or hostile",
+    "toki": "wile sona nanpa wan li ni: ale li pona anu ike?"
+  }, {
+    "eng": "The wisdom of life consists in the elimination of non-essentials",
+    "toki": "sona pona li ni: o weka e ike"
+  }, {
+    "eng": "Simplicity is the ultimate sophistication",
+    "toki": "nasin pona li pona nanpa wan"
+  }, {
+    "eng": "If you can't explain something simply, you don't understand it well",
+    "toki": "sina ken ala toki e ijo lon toki pona, la sina sona pona ala e ona"
+  }, {
+    "eng": "everything has a time",
+    "toki": "ale li jo e tenpo"
+  }, {
+    "eng": "life is great",
+    "toki": "ale li pona"
+  }, {
+    "eng": "times change",
+    "toki": "ante li kama"
+  }, {
+    "eng": "shit happens",
+    "toki": "ike li kama"
+  }, {
+    "eng": "A genius thinks unconventionally",
+    "toki": "jan sona li jan nasa"
+  }, {
+    "eng": "People are more important than money",
+    "toki": "jan li suli mute. mani li suli lili"
+  }, {
+    "eng": "When I improve all areas of my life, I improve myself",
+    "toki": "mi pona e ale mi, la mi pona e mi"
+  }, {
+    "eng": "Love thy neighbour",
+    "toki": "o olin e jan poka"
+  }, {
+    "eng": "All roads lead to Rome",
+    "toki": "nasin pona li mute"
+  }, {
+    "eng": "Know thyself",
+    "toki": "o sona e sina"
+  }, {
+    "eng": "One learns by experience",
+    "toki": "pali li pana e sona"
+  }, {
+    "eng": "What goes around comes around",
+    "toki": "sina pana e ike, la sina kama jo e ike"
+  }, {
+    "eng": "Mind over matter",
+    "toki": "pilin pona li pana e sijelo pona"
+  }, {
+    "eng": "Energy is within",
+    "toki": "wawa li lon insa"
+  }, {
+    "eng": "Temporary isolation is good for guidance",
+    "toki": "weka lili li pona tawa lawa"
+  }, {
+    "eng": "Children don't know evil",
+    "toki": "jan lili li sona ala e ike"
+  }, {
+    "eng": "Curiosity multiplies wisdom",
+    "toki": "wile sona li mute e sona"
+  }, {
+    "eng": "Women will make men crazy",
+    "toki": "meli li nasa e mije"
+  }, {
+    "eng": "When I erase others' faults, I cleanse myself of negativity",
+    "toki": "mi weka e ike jan, la mi weka e ike mi"
+  }, {
+    "eng": "Water is essential",
+    "toki": "telo li pona"
+  }, {
+    "eng": "Sleep is essential",
+    "toki": "lape li pona"
+  }, {
+    "eng": "Different strokes for different folks",
+    "toki": "nasin ante li pona tawa jan ante"
+  }, {
+    "eng": "Love the Earth",
+    "toki": "o pana e pona tawa ma"
+  }, {
+    "eng": "Violence never solves anything",
+    "toki": "utala li ike"
+  }, {
+    "eng": "A man of knowledge listens",
+    "toki": "jan sona li kute"
+  }, {
+    "eng": "hello!",
+    "toki": "toki!"
+  }, {
+    "eng": "thanks!",
+    "toki": "pona!"
+  }, {
+    "eng": "Oh no!",
+    "toki": "ike a!"
+  }, {
+    "eng": "life",
+    "toki": "ale"
+  }, {
+    "eng": "deal",
+    "toki": "esun"
+  }, {
+    "eng": "Oy! Hey!",
+    "toki": "o!"
+  }, {
+    "eng": "Food makes me bigger",
+    "toki": "moku li suli e mi"
   }
 ];

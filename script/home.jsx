@@ -16,6 +16,7 @@ var Root = React.createClass({
   render: function() {
     var entries = Dictionary.search(this.state.query)
     var entryElements = entries.map(function(entry) {
+      var key = simpleHash(entry.toki);
       return <WordEntry key={entry.toki} eng={entry.eng} toki={entry.toki} />
     });
 
@@ -48,3 +49,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
       document.getElementById("react-container")
   );
 });
+
+var simpleHash = function() {
+  var hash = 0, i, chr, len;
+  if (this.length === 0) return hash;
+  for (i = 0, len = this.length; i < len; i++) {
+    chr   = this.charCodeAt(i);
+    hash  = ((hash << 5) - hash) + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};

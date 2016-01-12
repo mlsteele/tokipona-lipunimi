@@ -1,12 +1,30 @@
 var data = require("./tokipona.js");
 
+// Find duplicates.
+(function() {
+  // https://stackoverflow.com/questions/840781/easiest-way-to-find-duplicate-values-in-a-javascript-array
+  var arr = data.map(function(entry) {return entry.toki.toLowerCase()});
+  var sorted_arr = arr.sort();
+  var results = [];
+  for (var i = 0; i < arr.length - 1; i++) {
+      if (sorted_arr[i + 1] == sorted_arr[i]) {
+          results.push(sorted_arr[i]);
+      }
+  }
+
+  if (results.length > 0) {
+    console.warn("Duplicate toki entries in dictionary.");
+    console.log(results);
+  }
+})()
+
 var fuse = new Fuse(data, {
   caseSensitive: false,
   includeScore: false,
   shouldSort: true,
   threshold: 0.2,
   location: 0,
-  distance: 200,
+  distance: 10000,
   maxPatternLength: 128,
   keys: ["eng", "toki"]
 });
