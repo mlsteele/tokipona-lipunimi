@@ -5,7 +5,7 @@ var _ = require("../vendor/lodash.min.js");
 
 var colors = {
   lightOrange: "hsl(30, 100%, 85%)",
-  lightBlue: "hsl(210, 100%, 95%)",
+  lightBlue: "hsl(175, 50%, 93%)",
   lightGrey: "hsl(0, 0%, 30%)",
 }
 
@@ -105,9 +105,10 @@ var WordEntry = React.createClass({
 
 WordEntry.prototype.styles = {
   box: {
-    padding: "10px 25px",
+    padding: "15px 25px",
     width: "80%",
     margin: "5px auto",
+    borderBottom: "1px solid #444",
   },
   toki: {
     color: colors.lightGrey,
@@ -123,7 +124,7 @@ WordEntry.prototype.styles = {
     padding: 0
   },
   even: {
-    backgroundColor: colors.lightBlue,
+    // backgroundColor: colors.lightBlue,
   }
 }
 
