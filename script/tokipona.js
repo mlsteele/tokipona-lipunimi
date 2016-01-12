@@ -329,7 +329,7 @@ module.exports = [{
         "rus": "смерть, умереть, быть мёртвым, убить, мёртвый, убийственный, фатальный",
         "image": "moli"
 }, {
-        "eng": "back, back, back",
+        "eng": "back, butt, behind",
         "ita": "indietro, indietro, indietro",
         "toki": "monsi",
         "rus": "зад, сзади, задний",

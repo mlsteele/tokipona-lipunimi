@@ -20,7 +20,7 @@ var data = require("./tokipona.js");
 
 var fuse = new Fuse(data, {
   caseSensitive: false,
-  includeScore: false,
+  include: ["score"],
   shouldSort: true,
   threshold: 0.2,
   location: 0,
@@ -30,7 +30,10 @@ var fuse = new Fuse(data, {
 });
 
 exports.search = function(query){
-  return fuse.search(query).slice(0, 10);
+  return fuse.search(query).slice(0, 10).map(function(res) {
+    res.item.score = res.score;
+    return res.item;
+  });
 };
 
 /*

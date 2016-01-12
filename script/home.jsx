@@ -2,7 +2,8 @@ var Dictionary = require("./dictionary.js");
 
 var Root = React.createClass({
   getInitialState: function(){
-    return { query: "" };
+    // TODO(miles): start with clear state.
+    return { query: "times" };
   },
 
   _setQuery: function(query) {
@@ -17,12 +18,18 @@ var Root = React.createClass({
     var entries = Dictionary.search(this.state.query)
     var entryElements = entries.map(function(entry) {
       var key = simpleHash(entry.toki);
-      return <WordEntry key={entry.toki} eng={entry.eng} toki={entry.toki} />
+      return <WordEntry key={entry.toki} eng={entry.eng} toki={entry.toki} score={entry.score} />
     });
+
+    var instructions =
+      <span>Enter a word or phrase in English or Toki Pona.</span>;
+    if (entries.length > 0) {
+      instructions = null;
+    }
 
     return <div>
       <input autoFocus type="text" onChange={this._onInputChange} />
-      <span>{this.state.query}</span>
+      {instructions}
       {entryElements}
     </div>;
   }
@@ -31,19 +38,16 @@ var Root = React.createClass({
 var WordEntry = React.createClass({
   propTypes: {
     eng: React.PropTypes.string.isRequired,
-    toki: React.PropTypes.string.isRequired
+    toki: React.PropTypes.string.isRequired,
+    score: React.PropTypes.number.isRequired
   },
 
   render: function() {
-    return <div><b>{this.props.toki} </b>{this.props.eng}</div>;
+    return <div><b>{this.props.toki} </b><br/>{this.props.eng}</div>;
   }
 });
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  function log(e) {
-    console.log(e.target.value);
-  };
-
   ReactDOM.render(
       <Root />,
       document.getElementById("react-container")
