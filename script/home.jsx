@@ -1,33 +1,50 @@
-var Timer = React.createClass({
+var Dictionary = require("./dictionary.js");
+
+var Root = React.createClass({
   getInitialState: function(){
-    return { elapsed: 0 };
+    return { query: "" };
   },
 
-  componentDidMount: function(){
-    this.timer = setInterval(this.tick, 1000/60);
+  _setQuery: function(query) {
+    this.setState({ query: query });
   },
 
-  componentWillUnmount: function(){
-    clearInterval(this.timer);
-  },
-
-  tick: function(){
-    this.setState({elapsed: new Date() - this.props.start});
+  _onInputChange(event) {
+    this._setQuery(event.target.value);
   },
 
   render: function() {
-    var elapsed = Math.round(this.state.elapsed / 100);
+    var entries = Dictionary.search(this.state.query)
+    var entryElements = entries.map(function(entry) {
+      return <WordEntry key={entry.toki} eng={entry.eng} toki={entry.toki} />
+    });
 
-    // This will give a number with one digit after the decimal dot (xx.x):
-    var seconds = (elapsed / 10).toFixed(1);
+    return <div>
+      <input autoFocus type="text" onChange={this._onInputChange} />
+      <span>{this.state.query}</span>
+      {entryElements}
+    </div>;
+  }
+});
 
-    return <p>This example was started <b>{seconds} seconds</b> ago.</p>;
+var WordEntry = React.createClass({
+  propTypes: {
+    eng: React.PropTypes.string.isRequired,
+    toki: React.PropTypes.string.isRequired
+  },
+
+  render: function() {
+    return <div><b>{this.props.toki} </b>{this.props.eng}</div>;
   }
 });
 
 document.addEventListener("DOMContentLoaded", function(event) {
+  function log(e) {
+    console.log(e.target.value);
+  };
+
   ReactDOM.render(
-      <Timer start={Date.now()} />,
+      <Root />,
       document.getElementById("react-container")
   );
 });

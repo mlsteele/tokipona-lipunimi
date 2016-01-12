@@ -19,3 +19,5 @@ Visit [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-
 ## Acknowledgements
 
 Thanks to [Visual Toki Pona](https://github.com/x-raizor/visual-tokipona) from which I took `tokipona.json`.
+
+Thanks to [Advanced Toki Pona on Memrise](http://www.memrise.com/course/443499/advanced-toki-pona/) for more words.
