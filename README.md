@@ -1,4 +1,4 @@
-# Toki Pona - Kama Sona
+# Toki Pona - Lipu Nimi
 
 A toki pona language reference to and from English.
 

@@ -1,8 +1,8 @@
 {
-  "name": "tokipona-kamasona",
+  "name": "tokipona-lipunimi",
   "version": "1.0.0",
   "description": "A toki pona language reference to and from English.",
-  "main": "index.js",
+  "main": "entry.js",
   "dependencies": {
     "babel-core": "^6.4.0",
     "babel-loader": "^6.2.1",
@@ -17,6 +17,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlsteele/tokipona-lipunimi.git"
+  },
+  "keywords": [
+    "tokipona"
+  ],
+  "author": "Miles Steele",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mlsteele/tokipona-lipunimi/issues"
+  },
+  "homepage": "https://github.com/mlsteele/tokipona-lipunimi#readme"
 }
