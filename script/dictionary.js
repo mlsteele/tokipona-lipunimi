@@ -18,60 +18,67 @@ var data = require("./tokipona.js");
   }
 })()
 
-var isNotEmptyString = function(s) {
-  return s.length !== 0;
-}
+backends = {};
 
-var tokenize = function(s) {
-  return s.toLowerCase().split(/[\W+]/).filter(isNotEmptyString)
-}
+// Bloodhound backend.
+backends.bloodhound = function() {
+  var isNotEmptyString = function(s) {
+    return s.length !== 0;
+  }
 
-var queryTokenizer = function(query) {
-  return tokenize(query);
-}
+  var tokenize = function(s) {
+    return s.toLowerCase().split(/[\W+]/).filter(isNotEmptyString)
+  }
 
-var datumTokenizer = function(datum) {
-  return tokenize(datum.toki + "|" + datum.eng);
-}
+  var queryTokenizer = function(query) {
+    return tokenize(query);
+  }
 
-var engine = new Bloodhound({
-  initialize: false,
-  local: data,
-  queryTokenizer: queryTokenizer,
-  datumTokenizer: datumTokenizer,
-  sufficient: 10,
-});
+  var datumTokenizer = function(datum) {
+    return tokenize(datum.toki + "|" + datum.eng);
+  }
 
-engine.initialize();
-
-exports.search = function(query) {
-  result = null;
-  engine.search(query, function(datums) {
-    result = datums;
+  var engine = new Bloodhound({
+    initialize: false,
+    local: data,
+    queryTokenizer: queryTokenizer,
+    datumTokenizer: datumTokenizer,
+    sufficient: 10,
   });
-  return result.slice(0, 10);
+
+  engine.initialize();
+
+  return function search(query) {
+    result = null;
+    engine.search(query, function(datums) {
+      result = datums;
+    });
+    return result.slice(0, 10);
+  };
+}
+
+// Fuse backend.
+backends.fuse = function() {
+  var fuse = new Fuse(data, {
+    caseSensitive: false,
+    include: ["score"],
+    shouldSort: true,
+    threshold: 0.2,
+    location: 0,
+    distance: 10000,
+    maxPatternLength: 128,
+    keys: ["eng", "toki"]
+  });
+
+  return function search(query){
+    return fuse.search(query).slice(0, 10).map(function(res) {
+      res.item.score = res.score;
+      return res.item;
+    });
+  };
 };
 
-
-/* Fuse implementation.
-var fuse = new Fuse(data, {
-  caseSensitive: false,
-  include: ["score"],
-  shouldSort: true,
-  threshold: 0.2,
-  location: 0,
-  distance: 10000,
-  maxPatternLength: 128,
-  keys: ["eng", "toki"]
-});
-
-exports.search = function(query){
-  return fuse.search(query).slice(0, 10).map(function(res) {
-    res.item.score = res.score;
-    return res.item;
-  });
-};
-*/
+exports.search = backends.bloodhound();
 
 /* Old custom implementation.
 var score = function(query, entry) {
