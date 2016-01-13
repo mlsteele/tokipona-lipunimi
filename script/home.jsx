@@ -32,14 +32,14 @@ var Root = React.createClass({
 
     var instructions = null;
     if (this.state.query.length == 0) {
-      instructions = <div style={_.extend({}, this.styles.subtext, {width: 350})}>
+      instructions = <div style={_.extend({}, this.styles.subtext, {maxWidth: 350})}>
         Enter a word or phrase in English or Toki Pona.
       </div>;
     }
 
     var nomatch = null;
     if (this.state.query.length > 0 && entries.length == 0) {
-      nomatch = <div style={_.extend({}, this.styles.subtext, {width: 150})}>
+      nomatch = <div style={_.extend({}, this.styles.subtext, {maxWidth: 150})}>
         No matching words.
       </div>;
     }
@@ -47,6 +47,7 @@ var Root = React.createClass({
     return <div>
       <div style={this.styles.inputWrap}>
         <input style={this.styles.tpinput} autoFocus type="text" onChange={this._onInputChange} />
+        <About url={"https://github.com/mlsteele/tokipona-lipunimi"} />
       </div>
       {instructions}
       {nomatch}
@@ -58,15 +59,16 @@ var Root = React.createClass({
 Root.prototype.styles = {
   inputWrap: {
     width: "100%",
-    padding: "10px 0",
+    padding: "10px 10px",
     backgroundColor: colors.lightOrange,
     marginBottom: 10,
+    textAlign: "center",
   },
   tpinput: {
-    display: "block",
+    display: "inline-block",
     borderWidth: 1,
     borderColor: "black",
-    maxWidth: 400,
+    maxWidth: 230,
     height: "1.4em",
     fontSize: "1.4em",
     padding: "5px 7px",
@@ -77,6 +79,7 @@ Root.prototype.styles = {
     fontSize: "16px",
     margin: "0 auto",
     color: colors.lightGrey,
+    padding: 10,
     paddingTop: 10,
   },
 };
@@ -132,6 +135,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
       document.getElementById("react-container")
   );
 });
+
+var About = React.createClass({
+  propTypes: {
+    url: React.PropTypes.string.isRequired,
+  },
+
+  render: function() {
+    return <a href={this.props.url}>
+      <div style={this.styles.box}>
+        <span>?</span>
+      </div>
+    </a>;
+  },
+});
+
+About.prototype.styles = {
+  box: {
+    float: "right",
+    width: 23,
+    height: 23,
+    textAlign: "center",
+    borderRadius: 50,
+    padding: 10,
+    margin: 0,
+    marginRight: 20,
+    backgroundColor: "hsla(0, 0%, 100%, 0.5)",
+    fontSize: "23px",
+    lineHeight: 1,
+    color: "hsl(0, 0%, 50%)",
+  }
+};
 
 var simpleHash = function(x) {
   var hash = 0, i, chr, len;
