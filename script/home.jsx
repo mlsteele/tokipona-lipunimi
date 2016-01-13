@@ -11,8 +11,7 @@ var colors = {
 
 var Root = React.createClass({
   getInitialState: function(){
-    // TODO(miles): start with clear state.
-    return { query: "good" };
+    return { query: "" };
   },
 
   _setQuery: function(query) {
