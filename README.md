@@ -2,6 +2,8 @@
 
 A toki pona language reference to and from English.
 
+Demo: [https://mlsteele.github.io/tokipona-lipunimi/](https://mlsteele.github.io/tokipona-lipunimi/)
+
 ## Developing
 
 Install node dependencies:
@@ -15,6 +17,12 @@ webpack-dev-server --watch
 ```
 
 Visit [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/)
+
+## Deploy
+
+Run `./deploy` to run webpack and push to github pages.
+
+Alternatively, just run `webpack` and then statically serve the repo directory.
 
 ## Acknowledgements
 
