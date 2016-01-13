@@ -66,7 +66,7 @@ Root.prototype.styles = {
     display: "block",
     borderWidth: 1,
     borderColor: "black",
-    width: 180,
+    maxWidth: 400,
     height: "1.4em",
     fontSize: "1.4em",
     padding: "5px 7px",

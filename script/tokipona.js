@@ -1501,5 +1501,8 @@ module.exports = [{
   }, {
     "eng": "Food makes me bigger",
     "toki": "moku li suli e mi"
+  }, {
+    "eng": "to cut",
+    "toki": "kipisi"
   }
 ];
