@@ -24,7 +24,7 @@ backends = {};
 // Lunr backend.
 backends.lunr = function() {
   var index = lunr(function() {
-    this.field("toki", { boost: 3 });
+    this.field("toki", { boost: 10 });
     this.field("eng");
   });
 
@@ -107,7 +107,9 @@ backends.fuse = function() {
   };
 };
 
-exports.search = backends.lunr();
+// exports.search = backends.lunr();
+exports.search = backends.bloodhound();
+// exports.search = backends.fuse();
 
 /* Old custom implementation.
 var score = function(query, entry) {
