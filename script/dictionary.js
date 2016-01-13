@@ -1,4 +1,5 @@
 var data = require("./tokipona.js");
+var _ = require("../vendor/lodash.min.js");
 
 // Find and report duplicates in the data.
 (function() {
@@ -19,6 +20,34 @@ var data = require("./tokipona.js");
 })()
 
 backends = {};
+
+// Lunr backend.
+backends.lunr = function() {
+  var index = lunr(function() {
+    this.field("toki", { boost: 3 });
+    this.field("eng");
+  });
+
+  var store = {};
+
+  // Load data.
+  _.forEach(data, function(entry, i) {
+    var doc =  {
+      toki: entry.toki,
+      eng: entry.eng,
+      id: i,
+    };
+    store[i] = doc;
+    index.add(doc);
+  });
+
+  return function search(query) {
+    var results = index.search(query).map(function(res) {
+      return store[res.ref];
+    });
+    return results;
+  };
+};
 
 // Bloodhound backend.
 backends.bloodhound = function() {
@@ -55,7 +84,7 @@ backends.bloodhound = function() {
     });
     return result.slice(0, 10);
   };
-}
+};
 
 // Fuse backend.
 backends.fuse = function() {
@@ -78,7 +107,7 @@ backends.fuse = function() {
   };
 };
 
-exports.search = backends.bloodhound();
+exports.search = backends.lunr();
 
 /* Old custom implementation.
 var score = function(query, entry) {
