@@ -58,7 +58,7 @@ var Root = React.createClass({
 Root.prototype.styles = {
   inputWrap: {
     width: "100%",
-    padding: 10,
+    padding: "10px 0",
     backgroundColor: colors.lightOrange,
     marginBottom: 10,
   },
