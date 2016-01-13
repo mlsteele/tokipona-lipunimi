@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+set -x
+
+ACTIVE_BRANCH=`git rev-parse --abbrev-ref HEAD`
+git diff --exit-code
+rm -f bundle.js
+git checkout gh-pages
+git reset --hard $ACTIVE_BRANCH
+webpack
+git add bundle.js
+git commit -m "update from deploy script"
+rm bundle.js
+git checkout $ACTIVE_BRANCH
+git push origin +gh-pages
