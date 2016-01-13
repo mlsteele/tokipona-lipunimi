@@ -27,7 +27,7 @@ var Root = React.createClass({
     var entryElements = entries.map(function(entry, i) {
       var key = simpleHash(entry.toki);
       return <WordEntry key={entry.toki} i={i}
-              eng={entry.eng} toki={entry.toki} score={entry.score} />
+              eng={entry.eng} toki={entry.toki} />
     });
 
     var instructions = null;
@@ -85,7 +85,6 @@ var WordEntry = React.createClass({
   propTypes: {
     eng: React.PropTypes.string.isRequired,
     toki: React.PropTypes.string.isRequired,
-    score: React.PropTypes.number.isRequired,
     i: React.PropTypes.number.isRequired
   },
 
