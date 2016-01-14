@@ -8,6 +8,10 @@ This tool is intended to be a quick reference and helper for reading and transla
 toki pona and English. It should contain all commonly used words as well as some multi-word constructions,
 idioms, and a few example sentences.
 
+To learn about more about toki pona see:
+- [tokipona.org](http://tokipona.org/)
+- [tokipona.net](http://tokipona.net)
+
 ## Developing
 
 Install node dependencies:
