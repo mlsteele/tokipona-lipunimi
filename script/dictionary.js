@@ -143,6 +143,14 @@ function patchSearch(underlyingSearch) {
   return search;
 }
 
-// exports.search = patchSearch(backends.lunr());
-exports.search = patchSearch(backends.bloodhound());
-// exports.search = patchSearch(backends.fuse());
+exports.init = function(backendName) {
+  exports.search = patchSearch(backends[backendName]());
+}
+
+exports.search = function() {
+  console.error("Run init to select a backend before using the dictionary.");
+  console.log("The available backends are:");
+  for (var bn in backends) {
+    console.log(bn);
+  }
+}

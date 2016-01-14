@@ -1,7 +1,8 @@
 "use strict";
 
-var Dictionary = require("./dictionary.js");
 var _ = require("../vendor/lodash.min.js");
+var Dictionary = require("./dictionary.js");
+Dictionary.init(getQueryParameter("backend") || "bloodhound");
 
 var colors = {
   lightOrange: "hsl(30, 100%, 85%)",
@@ -177,3 +178,11 @@ var simpleHash = function(x) {
   }
   return hash;
 };
+
+function getQueryParameter(name) {
+  // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+  var results = regex.exec(location.search);
+  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
