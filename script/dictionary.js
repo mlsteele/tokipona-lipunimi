@@ -1,6 +1,8 @@
 var data = require("./tokipona.js");
 var _ = require("../vendor/lodash.min.js");
 
+var RESULT_LIMIT = 10;
+
 // Find and report duplicates in the data.
 (function() {
   // https://stackoverflow.com/questions/840781/easiest-way-to-find-duplicate-values-in-a-javascript-array
@@ -19,6 +21,7 @@ var _ = require("../vendor/lodash.min.js");
   }
 })()
 
+// Search backends.
 backends = {};
 
 // Lunr backend.
@@ -72,7 +75,7 @@ backends.bloodhound = function() {
     local: data,
     queryTokenizer: queryTokenizer,
     datumTokenizer: datumTokenizer,
-    sufficient: 10,
+    sufficient: RESULT_LIMIT,
   });
 
   engine.initialize();
@@ -82,7 +85,7 @@ backends.bloodhound = function() {
     engine.search(query, function(datums) {
       result = datums;
     });
-    return result.slice(0, 10);
+    return result.slice(0, RESULT_LIMIT);
   };
 };
 
@@ -99,65 +102,47 @@ backends.fuse = function() {
     keys: ["eng", "toki"]
   });
 
-  return function search(query){
-    return fuse.search(query).slice(0, 10).map(function(res) {
+  return function search(query) {
+    return fuse.search(query).slice(0, RESULT_LIMIT).map(function(res) {
       res.item.score = res.score;
       return res.item;
     });
   };
 };
 
-// exports.search = backends.lunr();
-exports.search = backends.bloodhound();
-// exports.search = backends.fuse();
+// The search backends to not seem to grant the appropriate degree of esteem to
+// exact matches. For example, 'mi' yields 'lawa', 'li', etc. but 'mi' isn't even
+// in the results!
+// This function wraps a search function and promotes exact matches on the toki to the top.
+function patchSearch(underlyingSearch) {
+  var isNotEmptyString = function(s) {
+    return s.length !== 0;
+  };
 
-/* Old custom implementation.
-var score = function(query, entry) {
-  var toki_words = [entry.toki.toLowerCase()]
-      .filter(isNotEmptyString)
-      .map((s) => s.trim());
-  var eng_words = entry.eng.toLowerCase().split(/[,!?]/)
-      .filter(isNotEmptyString)
-      .map((s) => s.trim());
+  var normalize = function(s) {
+    return s.toLowerCase().split(/[\W+]/).filter(isNotEmptyString).join("");
+  };
 
-  var score = 0;
-
-  if (arrayContains(toki_words, query)) {
-    score += 1;
+  var exactMatcher = function(query) {
+    var normQuery = normalize(query);
+    return function match(entry) {
+      return normalize(entry.toki) == normQuery;
+    }
   }
 
-  if (arrayContains(eng_words, query)) {
-    score += 1;
+  var search = function(query) {
+    var underlyingResults = underlyingSearch(query);
+    var matcher = exactMatcher(query);
+    var exactResults = data.filter(matcher);
+    var inexactResults = underlyingResults.filter(function(entry) {
+      return !matcher(entry);
+    });
+    return exactResults.concat(inexactResults).slice(0, RESULT_LIMIT);
   }
 
-  return score;
+  return search;
 }
 
-var arrayContains = function(array, value) {
-  return array.indexOf(value) > -1;
-}
-
-var isNotEmptyString = function(s) {
-  return s.length !== 0;
-}
-
-exports.search = function(query){
-  // Rank and sort each entry.
-  // Discard entries with 0 score.
-
-  return data.map(function(entry) {
-    return {
-      entry: entry,
-      score: score(query, entry)
-    };
-  }).filter(function(pair) {
-    return pair.score > 0;
-  }).sort(function(a, b) {
-    if (a.score < b.score) return -1;
-    if (a.score > b.score) return 1;
-    return 0;
-  }).map(function(pair) {
-    return pair.entry;
-  });
-};
-*/
+// exports.search = patchSearch(backends.lunr());
+exports.search = patchSearch(backends.bloodhound());
+// exports.search = patchSearch(backends.fuse());
