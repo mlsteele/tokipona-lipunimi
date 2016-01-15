@@ -902,7 +902,7 @@ module.exports = [{
     "eng": "urine",
     "toki": "telo jelo"
   }, {
-    "eng": "shit",
+    "eng": "shit, poo",
     "toki": "ko jaki"
   }, {
     "eng": "blood",
