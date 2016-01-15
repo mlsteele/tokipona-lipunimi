@@ -2,7 +2,7 @@
 
 var _ = require("../vendor/lodash.min.js");
 var Dictionary = require("./dictionary.js");
-Dictionary.init(getQueryParameter("backend") || "bloodhound");
+Dictionary.init(getQueryParameter("backend") || "fuse");
 
 var colors = {
   lightOrange: "hsl(30, 100%, 85%)",
