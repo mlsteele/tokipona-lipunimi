@@ -515,7 +515,7 @@ module.exports = [{
         "rus": "огонь, тепло, горячий, тёплый, приготовленный (о еде), нагревать, готовить",
         "image": "seli"
 }, {
-        "eng": "surface, outside, leather, shell, form",
+        "eng": "surface, outside, leather, shell, form, skin",
         "ita": "superficie, esterna, in pelle, conchiglia, forma",
         "toki": "selo",
         "rus": "поверхность, снаружи, кожа, раковина, форма",
